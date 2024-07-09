@@ -1,0 +1,83 @@
+@import "../../variables";
+.nav {
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
+  background: rgb(255, 255, 255);
+  &__logo {
+    margin-top: 33px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    margin-top: 32px;
+    list-style: none;
+    gap: 30px;
+    &-item {
+      position: relative;
+      color: rgb(149, 151, 165);
+      font-family: $public-sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: -0.11px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    &-item:hover {
+      color: rgb(45, 49, 77);
+    }
+
+    &-item::after {
+      content: "";
+      position: absolute;
+
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 4px;
+
+      background: linear-gradient(
+        134.71deg,
+        rgb(51, 211, 94) -49.181%,
+        rgb(42, 182, 217) 50.399%
+      );
+      transition: width 0.3s ease;
+    }
+
+    &-item:hover::after {
+      width: 40px;
+    }
+  }
+  &__button {
+    margin-top: 18px;
+
+    width: 163px;
+    height: 44px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+      134.71deg,
+      rgb(51, 211, 94) -43.027%,
+      rgb(42, 182, 217) 56.553%
+    );
+    color: rgb(255, 255, 255);
+    font-family: $public-sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    border: none;
+    cursor: pointer;
+  }
+  &__button:hover {
+    opacity: 0.4;
+  }
+}
