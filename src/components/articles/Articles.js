@@ -2,6 +2,9 @@ import React from "react";
 import "./articles.scss";
 
 import currency from "../../assets/image-currency.jpg";
+import restaurant from "../../assets/image-restaurant.jpg";
+import plane from "../../assets/image-plane.jpg";
+import confetti from "../../assets/image-confetti.jpg";
 
 function Articles() {
   return (
@@ -25,7 +28,7 @@ function Articles() {
 
         <div className="articles__card">
           <div className="articles__card-img">
-            <img src={currency} alt="currency" />
+            <img src={restaurant} alt="restaurant" />
           </div>
           <div className="articles__card-autor">By Wilson Hutton</div>
 
@@ -35,6 +38,36 @@ function Articles() {
           <div className="articles__card-descr">
             Our simple budgeting feature allows you to separate out your
             spending and set realistic limits each month. That means you …
+          </div>
+        </div>
+
+        <div className="articles__card">
+          <div className="articles__card-img">
+            <img src={plane} alt="plane" />
+          </div>
+          <div className="articles__card-autor">By Wilson Hutton</div>
+
+          <div className="articles__card-title">
+            Take your Easybank card wherever you go
+          </div>
+          <div className="articles__card-descr">
+            We want you to enjoy your travels. This is why we don’t charge any
+            fees on purchases while you’re abroad. We’ll even show you …
+          </div>
+        </div>
+
+        <div className="articles__card">
+          <div className="articles__card-img">
+            <img src={confetti} alt="confetti" />
+          </div>
+          <div className="articles__card-autor">By Claire Robinson</div>
+
+          <div className="articles__card-title">
+            Our invite-only Beta accounts are now live!
+          </div>
+          <div className="articles__card-descr">
+            After a lot of hard work by the whole team, we’re excited to launch
+            our closed beta. It’s easy to request an invite through the site ...
           </div>
         </div>
       </div>

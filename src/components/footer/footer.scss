@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.footer {
+  width: 100%;
+  padding-left: 165px;
+  background: rgb(45, 49, 77);
+  &__wrapper {
+    display: flex;
+  }
+
+  &__social {
+    display: flex;
+  }
+}
+.lor {
+  width: 200px;
+  height: 150px;
+}

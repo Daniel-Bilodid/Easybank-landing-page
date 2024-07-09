@@ -3,6 +3,7 @@ import Nav from "./components/nav/Nav";
 import Hero from "./components/hero/Hero";
 import Choose from "./components/choose/Choose";
 import Articles from "./components/articles/Articles";
+import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Choose />
       <Articles />
+      <Footer />
     </div>
   );
 }
