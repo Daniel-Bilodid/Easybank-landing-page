@@ -3,11 +3,17 @@
 .hero {
   width: 100%;
   height: 656px;
+  overflow: hidden;
 
   &__wrapper {
     display: flex;
+    position: relative;
   }
-
+  &__images {
+    &-mobile {
+      display: none;
+    }
+  }
   &__btn {
     &-wrapper {
       width: 163px;
@@ -17,8 +23,8 @@
   &__img {
     position: absolute;
     z-index: -1;
-    right: -317px;
-    top: -181px;
+    right: -460px;
+    top: -263px;
   }
 
   &__text {
@@ -76,5 +82,47 @@
     right: -130px;
     top: -2.5rem;
     z-index: -1;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1320px) {
+  .hero {
+    height: unset;
+    &__img img {
+      display: none;
+    }
+    &__images {
+      &-mobile {
+        display: block;
+      }
+    }
+    &__mockups {
+      &-mobile {
+        position: absolute;
+        top: -12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 300px;
+      }
+    }
+    &__img {
+      &-mobile img {
+        width: 100%;
+        height: 950px;
+      }
+      &-mobile {
+        width: 100%;
+        height: 600px;
+      }
+    }
+    &__wrapper {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__mockups {
+      display: none;
+    }
   }
 }

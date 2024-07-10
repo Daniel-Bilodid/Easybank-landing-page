@@ -3,11 +3,20 @@ import "./hero.scss";
 
 import bgIntro from "../../assets/bg-intro-desktop.svg";
 import mockups from "../../assets/image-mockups.png";
+import bgMobile from "../../assets/bg-intro-mobile.svg";
 
 function Hero() {
   return (
     <div className="hero">
       <div className="hero__wrapper">
+        <div className="hero__images-mobile">
+          <div className="hero__img-mobile">
+            <img src={bgMobile} alt="bgMobile" />
+          </div>
+          <div className="hero__mockups-mobile">
+            <img src={mockups} alt="mockups" />
+          </div>
+        </div>
         <div className="hero__text">
           <h1 className="hero__text-title">Next generation digital banking</h1>
 
@@ -25,10 +34,9 @@ function Hero() {
         <div className="hero__img">
           <img src={bgIntro} alt="bgIntro" />
         </div>
-
-        <div className="hero__mockups">
-          <img src={mockups} alt="mockups" />
-        </div>
+      </div>
+      <div className="hero__mockups">
+        <img src={mockups} alt="mockups" />
       </div>
     </div>
   );
