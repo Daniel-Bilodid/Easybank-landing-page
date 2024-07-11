@@ -16,10 +16,11 @@
     font-size: 40px;
     font-weight: 300;
     line-height: 64px;
-    letter-spacing: -0.71px;
+    letter-spacing: -0.73px;
     text-align: left;
     padding-top: 96px;
     margin-bottom: 16px;
+    margin-left: 0px;
   }
 
   &__descr {
@@ -30,7 +31,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    letter-spacing: -0.28px;
+    letter-spacing: -0.31px;
     text-align: left;
   }
   &__card {
@@ -59,7 +60,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 26px;
-      letter-spacing: -0.25px;
+      letter-spacing: -0.27px;
       text-align: left;
     }
   }
@@ -76,7 +77,6 @@
   .choose {
     height: unset;
 
-    margin-top: 170px;
     padding: 0;
 
     &__card {
@@ -116,6 +116,34 @@
         margin-top: 56px;
         padding-bottom: 94px;
       }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .choose {
+    &__title {
+      width: 327px;
+      height: 76px;
+      color: rgb(45, 49, 77);
+
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 38px;
+      letter-spacing: -0.57px;
+      text-align: center;
+    }
+
+    &__descr {
+      width: 327px;
+      height: 75px;
+      color: rgb(149, 151, 165);
+
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: -0.23px;
+      text-align: center;
     }
   }
 }

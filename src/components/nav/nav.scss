@@ -4,20 +4,32 @@
   box-sizing: border-box;
   height: 80px;
   background: rgb(255, 255, 255);
-  &__logo {
-    margin-top: 33px;
-  }
+  display: flex;
+  justify-content: center;
+
   &__wrapper {
+    width: 100%;
+    max-width: 1100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__burger {
+    display: none;
+  }
+  &__logo {
+    margin-top: 9px;
+    margin-left: -5px;
   }
 
   &__list {
+    width: 304px;
     display: flex;
     margin: 0;
-    margin-top: 32px;
+    padding: 0;
     list-style: none;
     gap: 30px;
+
     &-item {
       position: relative;
       color: rgb(149, 151, 165);
@@ -28,41 +40,40 @@
       letter-spacing: -0.11px;
       text-align: left;
       cursor: pointer;
-    }
 
-    &-item:hover {
-      color: rgb(45, 49, 77);
-    }
+      &:hover {
+        color: rgb(45, 49, 77);
+      }
 
-    &-item::after {
-      content: "";
-      position: absolute;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 4px;
+        background: linear-gradient(
+          134.71deg,
+          rgb(51, 211, 94) -49.181%,
+          rgb(42, 182, 217) 50.399%
+        );
+        transition: width 0.3s ease;
+      }
 
-      bottom: -24px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 4px;
-
-      background: linear-gradient(
-        134.71deg,
-        rgb(51, 211, 94) -49.181%,
-        rgb(42, 182, 217) 50.399%
-      );
-      transition: width 0.3s ease;
-    }
-
-    &-item:hover::after {
-      width: 40px;
+      &:hover::after {
+        width: 40px;
+      }
     }
   }
+
   &__button {
-    margin-top: 18px;
-
     width: 163px;
-    height: 44px;
+    margin-top: -5px;
+    height: 45px;
+    margin-top: 0;
+    padding: 5px 20px;
     border-radius: 22px;
-
     background: linear-gradient(
       134.71deg,
       rgb(51, 211, 94) -43.027%,
@@ -76,8 +87,36 @@
     letter-spacing: 0px;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.4;
+    }
   }
-  &__button:hover {
-    opacity: 0.4;
+}
+
+@media (max-width: 1140px) {
+  .nav {
+    &__wrapper {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .nav {
+    max-width: 740px;
+    &__list {
+      display: none;
+    }
+    &__wrapper {
+      width: 90%;
+      justify-content: space-between;
+    }
+    &__burger {
+      display: block;
+    }
+    &__button {
+      display: none;
+    }
   }
 }
