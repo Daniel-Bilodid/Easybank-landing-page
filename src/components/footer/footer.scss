@@ -16,6 +16,7 @@
       width: 163px;
       height: 44px;
       border-radius: 22px;
+      margin-right: -57px;
 
       background: linear-gradient(
         134.71deg,
@@ -59,10 +60,11 @@
       text-align: left;
       margin: 0;
       margin-top: 49px;
+      padding-left: 128px;
     }
     &-first {
       padding: 0;
-      padding-left: 131px;
+      padding-left: 145px;
     }
     &-item:hover {
       color: rgb(48, 200, 143);
@@ -72,12 +74,13 @@
   &__social {
     display: flex;
     &-logo {
+      width: 140px;
       margin-top: 48px;
     }
     &-list {
       display: flex;
-      gap: 13.3px;
-      margin-top: 57px;
+      gap: 12.3px;
+      margin-top: 52px;
       padding: 0;
     }
     &-item {
@@ -96,16 +99,32 @@
 
 @media (max-width: 1100px) {
   .footer {
-    height: 510px;
+    height: 100%;
     padding: 0;
     margin: 0;
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__social {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__nav {
       &-list {
         padding: 0;
+
+        text-align: center;
       }
-    }
-    &__wrapper {
-      flex-direction: column;
+
+      &-first {
+        padding-left: 0;
+        text-align: center;
+        height: 50px;
+      }
     }
 
     &__social {
