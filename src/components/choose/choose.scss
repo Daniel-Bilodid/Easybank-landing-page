@@ -9,7 +9,6 @@
   padding-left: 165px;
 
   &__title {
-    width: 417px;
     height: 64px;
     color: rgb(45, 49, 77);
     font-family: $public-sans;
@@ -78,7 +77,9 @@
     height: unset;
 
     padding: 0;
-
+    &__title {
+      width: 417px !important;
+    }
     &__card {
       &-img {
         margin: 0 auto;
