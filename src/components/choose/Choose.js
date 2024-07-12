@@ -8,7 +8,7 @@ import api from "../../assets/icon-api.svg";
 
 function Choose() {
   const controls = useAnimation();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,8 +44,12 @@ function Choose() {
         hub. Control your finances like never before.
       </div>
 
-      <div className="choose__cards-wrapper">
-        <div className="choose__card">
+      <motion.div
+        className="choose__cards-wrapper"
+        initial="hidden"
+        animate={controls}
+      >
+        <motion.div className="choose__card" variants={cardVariants}>
           <div className="choose__card-img">
             <img src={online} alt="online" />
           </div>
@@ -55,9 +59,9 @@ function Choose() {
             Our modern web and mobile applications allow you to keep track of
             your finances wherever you are in the world.
           </div>
-        </div>
+        </motion.div>
 
-        <div className="choose__card">
+        <motion.div className="choose__card" variants={cardVariants}>
           <div className="choose__card-img">
             <img src={budgeting} alt="budgeting" />
           </div>
@@ -67,9 +71,9 @@ function Choose() {
             See exactly where your money goes each month. Receive notifications
             when you’re close to hitting your limits.
           </div>
-        </div>
+        </motion.div>
 
-        <div className="choose__card">
+        <motion.div className="choose__card" variants={cardVariants}>
           <div className="choose__card-img">
             <img src={onboarding} alt="onboarding" />
           </div>
@@ -79,9 +83,9 @@ function Choose() {
             We don’t do branches. Open your account in minutes online and start
             taking control of your finances right away.
           </div>
-        </div>
+        </motion.div>
 
-        <div className="choose__card">
+        <motion.div className="choose__card" variants={cardVariants}>
           <div className="choose__card-img">
             <img src={api} alt="api" />
           </div>
@@ -91,8 +95,8 @@ function Choose() {
             Manage your savings, investments, pension, and much more from one
             account. Tracking your money has never been easier.
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
