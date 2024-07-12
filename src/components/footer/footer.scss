@@ -131,5 +131,12 @@
       width: 135px;
       flex-direction: column;
     }
+
+    &__request {
+      padding-right: 0 !important;
+      &-button {
+        margin: 0 auto;
+      }
+    }
   }
 }
