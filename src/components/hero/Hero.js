@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
 
@@ -7,13 +7,15 @@ import mockups from "../../assets/image-mockups.png";
 import bgMobile from "../../assets/bg-intro-mobile.svg";
 
 function Hero() {
+  const [animationsEnabled, setAnimationsEnabled] = useState(false);
+
   return (
     <>
       <div className="hero">
         <div className="hero__wrapper">
           <motion.div
             className="hero__images-mobile"
-            initial={{ opacity: 0, x: -50 }}
+            initial={animationsEnabled ? { opacity: 0, x: -50 } : {}}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -27,7 +29,7 @@ function Hero() {
 
           <motion.div
             className="hero__text"
-            initial={{ opacity: 0, y: 50 }}
+            initial={animationsEnabled ? { opacity: 0, y: 50 } : {}}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
@@ -48,7 +50,7 @@ function Hero() {
 
           <motion.div
             className="hero__img"
-            initial={{ opacity: 0, x: 50 }}
+            initial={animationsEnabled ? { opacity: 0, x: 50 } : {}}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
@@ -59,7 +61,7 @@ function Hero() {
 
       <motion.div
         className="hero__mockups"
-        initial={{ opacity: 0 }}
+        initial={animationsEnabled ? { opacity: 0 } : {}}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >

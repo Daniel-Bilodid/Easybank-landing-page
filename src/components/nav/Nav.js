@@ -1,17 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.scss";
 import logo from "../../assets/logo.svg";
 import Burger from "../burgerMenu/Burger";
 import { motion } from "framer-motion";
 
 function Nav() {
+  const [animationsEnabled, setAnimationsEnabled] = useState(false);
+
   return (
-    <motion.div
-      className="nav"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="nav">
       <div className="nav__wrapper">
         <div
           className="nav__logo"
@@ -23,64 +20,18 @@ function Nav() {
         </div>
 
         <ul className="nav__list">
-          <motion.li
-            className="nav__list-item"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            Home
-          </motion.li>
-          <motion.li
-            className="nav__list-item"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            About
-          </motion.li>
-          <motion.li
-            className="nav__list-item"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            Contact
-          </motion.li>
-          <motion.li
-            className="nav__list-item"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            Blog
-          </motion.li>
-          <motion.li
-            className="nav__list-item"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            Careers
-          </motion.li>
+          <li className="nav__list-item">Home</li>
+          <li className="nav__list-item">About</li>
+          <li className="nav__list-item">Contact</li>
+          <li className="nav__list-item">Blog</li>
+          <li className="nav__list-item">Careers</li>
         </ul>
 
-        <motion.button
-          className="nav__button"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-        >
-          Request Invite
-        </motion.button>
+        <button className="nav__button">Request Invite</button>
 
-        <Burger
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        />
+        <Burger />
       </div>
-    </motion.div>
+    </div>
   );
 }
 

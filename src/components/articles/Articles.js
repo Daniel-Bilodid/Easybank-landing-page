@@ -41,12 +41,7 @@ function Articles() {
     <div className="articles">
       <div className="articles__title">Latest Articles</div>
       <div className="articles__wrapper">
-        <motion.div
-          className="articles__card"
-          variants={cardVariants}
-          initial="hidden"
-          animate={controls}
-        >
+        <div className="articles__card">
           <div className="articles__card-img">
             <img src={currency} alt="currency" />
           </div>
@@ -59,14 +54,9 @@ function Articles() {
             The world is getting smaller and we’re becoming more mobile. So why
             should you be forced to only receive money in a single …
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="articles__card"
-          variants={cardVariants}
-          initial="hidden"
-          animate={controls}
-        >
+        <div className="articles__card">
           <div className="articles__card-img">
             <img src={restaurant} alt="restaurant" />
           </div>
@@ -79,14 +69,9 @@ function Articles() {
             Our simple budgeting feature allows you to separate out your
             spending and set realistic limits each month. That means you …
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="articles__card"
-          variants={cardVariants}
-          initial="hidden"
-          animate={controls}
-        >
+        <div className="articles__card">
           <div className="articles__card-img">
             <img src={plane} alt="plane" />
           </div>
@@ -99,14 +84,9 @@ function Articles() {
             We want you to enjoy your travels. This is why we don’t charge any
             fees on purchases while you’re abroad. We’ll even show you …
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="articles__card"
-          variants={cardVariants}
-          initial="hidden"
-          animate={controls}
-        >
+        <div className="articles__card">
           <div className="articles__card-img">
             <img src={confetti} alt="confetti" />
           </div>
@@ -119,7 +99,7 @@ function Articles() {
             After a lot of hard work by the whole team, we’re excited to launch
             our closed beta. It’s easy to request an invite through the site ...
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

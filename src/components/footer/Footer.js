@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <motion.div
-      className="footer"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="footer">
       <div className="footer__wrapper">
         <div className="footer__social">
           <div className="footer__social-logo">
@@ -109,7 +104,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
