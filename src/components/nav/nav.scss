@@ -32,6 +32,8 @@
     padding: 0;
     list-style: none;
     gap: 30px;
+    padding-top: 1px;
+    padding-left: 5px;
 
     &-item {
       position: relative;
@@ -51,7 +53,7 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: -4px;
+        bottom: -32px;
         left: 50%;
         transform: translateX(-50%);
         width: 0;
@@ -90,10 +92,7 @@
     letter-spacing: 0px;
     border: none;
     cursor: pointer;
-
-    &:hover {
-      opacity: 0.4;
-    }
+    margin-right: -4px;
   }
 }
 
@@ -122,4 +121,8 @@
       display: none;
     }
   }
+}
+.nav__button:hover {
+  opacity: 0.4;
+  background-color: aqua;
 }

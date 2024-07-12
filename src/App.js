@@ -6,13 +6,13 @@ import Articles from "./components/articles/Articles";
 import Footer from "./components/footer/Footer";
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Nav />
       <Hero />
       <Choose />
       <Articles />
       <Footer />
-    </div>
+    </main>
   );
 }
 
