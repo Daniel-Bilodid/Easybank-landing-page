@@ -32,8 +32,6 @@
       cursor: pointer;
     }
 
-    &-button:hover {
-    }
     &-rigths {
       opacity: 0.5;
       color: rgb(255, 255, 255);
@@ -101,8 +99,17 @@
     height: 510px;
     padding: 0;
     margin: 0;
-
+    &__nav {
+      &-list {
+        padding: 0;
+      }
+    }
     &__wrapper {
+      flex-direction: column;
+    }
+
+    &__social {
+      width: 135px;
       flex-direction: column;
     }
   }
